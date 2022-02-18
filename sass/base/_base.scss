@@ -1,0 +1,29 @@
+body{
+    background-color: peachpuff;
+}
+
+.flex{
+    display: flex;
+    &_row{
+        flex-direction: row;
+    }
+    &_column{
+        flex-direction: column;
+    }
+    &_between{
+        justify-content: space-between;
+    }
+    &_around{
+        justify-content: space-around;
+    }
+    &_vertical{
+        &--center{
+        align-items: center;
+        }
+    }
+    &_horizontal{
+        &--center{
+        justify-content: center;
+        }
+    }
+}

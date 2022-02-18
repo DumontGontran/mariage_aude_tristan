@@ -2,10 +2,12 @@
   "name": "mariage_aude_tristan",
   "version": "1.0.0",
   "description": "Site de partage et de discussion pour le mariage d'Aude et de Tristan",
- 
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/mobile.css"
   },
   "author": "DumontGontran",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

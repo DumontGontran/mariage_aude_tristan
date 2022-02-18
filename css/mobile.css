@@ -1,3 +1,37 @@
+body {
+  background-color: peachpuff;
+}
 
+.flex {
+  display: flex;
+}
+.flex_row {
+  flex-direction: row;
+}
+.flex_column {
+  flex-direction: column;
+}
+.flex_between {
+  justify-content: space-between;
+}
+.flex_around {
+  justify-content: space-around;
+}
+.flex_vertical--center {
+  align-items: center;
+}
+.flex_horizontal--center {
+  justify-content: center;
+}
+
+header {
+  background-color: palevioletred;
+  border: 1px solid turquoise;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.fa-bars {
+  color: turquoise;
+}
 
 /*# sourceMappingURL=mobile.css.map */
