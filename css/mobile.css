@@ -1,5 +1,11 @@
+* {
+  font-family: "Satisfy", sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: peachpuff;
+  background-image: url("../images/website/background.png");
+  height: max-content;
 }
 
 .flex {
@@ -23,15 +29,72 @@ body {
 .flex_horizontal--center {
   justify-content: center;
 }
+.flex_horizontal--right {
+  justify-content: right;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+  background-color: transparent;
+  border-color: transparent;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 46px;
+  right: 8px;
+  padding-left: 0;
+  background-color: palevioletred;
+  border: 1px solid turquoise;
+  border-radius: 10px 10px 10px 10px;
+  width: 196px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li a {
+  display: block;
+  position: relative;
+  text-align: right !important;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content li {
+  padding: 12px 16px;
+  display: block;
+  border-bottom: 1px solid turquoise;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content li a:hover {
+  color: turquoise;
+  align-items: right;
+  display: block;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
 
 header {
   background-color: palevioletred;
   border: 1px solid turquoise;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.logo {
+  margin-left: 20px;
 }
 
 .fa-bars {
   color: turquoise;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=mobile.css.map */

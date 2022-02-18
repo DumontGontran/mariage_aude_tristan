@@ -1,5 +1,11 @@
+* {
+    font-family:'Satisfy', sans-serif;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: peachpuff;
+    background-image: url("../images/website/background.png");
+    height:max-content;
 }
 
 .flex{
@@ -25,5 +31,8 @@ body{
         &--center{
         justify-content: center;
         }
+        &--right{
+            justify-content: right;
+            }
     }
 }
