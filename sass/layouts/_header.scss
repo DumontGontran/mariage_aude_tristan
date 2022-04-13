@@ -1,14 +1,29 @@
-header{
-    background-color: rgb(217,112,147,0.5);
-    border: 1px solid turquoise;
-    border-radius: 10px 10px 10px 10px;
+header {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(217, 112, 147), rgb(255, 220, 164), turquoise);
+    border-image-slice: 1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
 }
 
-.logo{
+.logo {
+    font-size: 32px;
+    background: linear-gradient(to right, rgb(217, 112, 147), rgb(255, 220, 164), turquoise);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-left: 20px;
 }
 
-.fa-bars{
-    color: turquoise;
+.fa-bars {
+    font-family: "Font Awesome 6 Free";
+    content: "\f0c9";
+    background: linear-gradient(to top, rgb(217, 112, 147), rgb(255, 220, 164), turquoise);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-right: 20px;
 }

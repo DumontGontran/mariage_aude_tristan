@@ -1,0 +1,54 @@
+.fa-bars:hover{
+    animation: moving_bars_colors 800ms ease-in-out alternate forwards;
+}
+
+@keyframes moving_bars_colors{
+    0%{
+        background: linear-gradient(to top, rgb(217, 112, 147), rgb(255, 220, 164), turquoise);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:1;
+        transform: scale(1);
+    }
+    33%{
+        transform: scale(0.9);
+    }
+    50%{
+        background: linear-gradient(to bottom, rgb(217, 112, 147), rgb(255, 220, 164), turquoise);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:0.6;
+        transform: scale(0.9);
+    }
+    66%{
+        transform: scale(0.9);
+    }
+    100%{
+        background: linear-gradient(to top, rgb(217, 112, 147), rgb(255, 220, 164), turquoise);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+.dropdown-content{
+    animation: rotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
+}
+
+.dropdown-content li a:hover{
+    font-size: 18px;
+}
