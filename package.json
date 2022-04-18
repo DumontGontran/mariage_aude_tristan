@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Site de partage et de discussion pour le mariage d'Aude et de Tristan",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/mobile.css"
+    "sass": "sass --watch ./sass/main.scss:./css/mobile.css",
+    "prefix": "postcss ./css/mobile.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "DumontGontran",
   "license": "ISC",
