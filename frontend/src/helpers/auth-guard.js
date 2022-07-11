@@ -1,11 +1,13 @@
 import router from '@/router'
 
+/* eslint-disable-next-line */
 export function authGuard(to){
-    const token = localStorage.getItem('token')
+    let token = localStorage.getItem('token')
+    console.log('TOKEN GUARD', token)
     
     if(token){
         return true
     }
-    
+
     router.push('/login')
 }

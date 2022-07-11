@@ -181,15 +181,37 @@ h2 {
       font-size: 20px;
       display: block;
       position: relative;
-      text-align: right !important;
+      text-align: right;
+      margin:0;
       -webkit-text-fill-color: black;
+      border-color: transparent;
       text-decoration: none;
-    }
 
-    & li a:hover {
+      &:hover {
       -webkit-text-fill-color: turquoise;
+      border-color: transparent;
       align-items: right;
       display: block;
+    }
+    }
+
+    & li button {
+      font-family: 'Satisfy', sans-serif;
+      font-size: 20px;
+      display: block;
+      position: relative;
+      text-align: right;
+      margin:0 !important;
+      -webkit-text-fill-color: black;
+      border-color: transparent;
+      text-decoration: none;
+
+      &:hover {
+      -webkit-text-fill-color: turquoise;
+      border-color: transparent;
+      align-items: right;
+      display: block;
+    }
     }
   }
 }
@@ -199,7 +221,29 @@ header {
   border-width: 3px;
   border-style: solid;
   @include rainbow-color;
+  background-color: whitesmoke;
   margin-bottom: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-width: 350px;
+  border-width: 3px;
+  border-style: solid;
+  @include rainbow-color;
+  background-color: whitesmoke;
+
+  & span {
+    font-size: 40px;
+    font-family: 'Corinthia', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(217, 112, 147), rgb(203, 176, 132), turquoise);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 }
 
 .logo {

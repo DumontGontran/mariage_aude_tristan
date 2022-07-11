@@ -1,29 +1,40 @@
 <template>
   <div class="signup">
     <HeaderNotLogged />
-    <form class="flex flex_column" v-on:submit.prevent="loginSubmit">
+    <form class="flex flex_column" v-on:submit.prevent="login">
       <h2 class="flex flex_horizontal--center">Se connecter</h2>
       <label for="email">Email:</label>
       <input class="flex flex_justify--center flex_align--center" type="email" name="email" id="email"
-        placeholder="doe.john@outlook.fr" />
+        placeholder="doe.john@outlook.fr" autocomplete="email" v-on:change="getLoginEmail" />
       <label for="password">Mot de passe:</label>
       <input class="flex flex_justify--center flex_align--center" type="password" name="password" id="password"
-        placeholder="Motdepasse" />
+        placeholder="Motdepasse" autocomplete="password" v-on:change="getLoginPassword" />
       <div class="flex flex_row flex_between flex_align--center">
         <input type="submit" value="Valider" id="button_submit" class="button_submit" />
       </div>
     </form>
+    <FooterToUse />
   </div>
 </template>
 
 <script>
 import HeaderNotLogged from '@/components/HeaderNotLogged.vue'
+import FooterToUse from '@/components/FooterToUse.vue'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: 'LoginView',
   components: {
-    HeaderNotLogged
-  }
+    HeaderNotLogged,
+    FooterToUse
+},
+computed:{
+  ...mapGetters(['getUserId', 'getToken'])
+},
+methods: {
+  ...mapMutations(['getLoginEmail', 'getLoginPassword']),
+  ...mapActions(['login'])
+}
 }
 </script>
 

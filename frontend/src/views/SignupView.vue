@@ -1,44 +1,48 @@
 <template>
   <div class="signup">
     <HeaderNotLogged />
-    <form class="flex flex_column" v-on:submit.prevent="registerSubmit">
+    <form class="flex flex_column" v-on:submit.prevent="register">
       <h2 class="flex flex_horizontal--center">S'inscrire</h2>
       <label for="lastname">Nom:</label>
       <input class="flex flex_justify--center flex_align--center" type="text" name="lastname" id="lastname"
-        placeholder="Doe" autocomplete="lastname" v-on:keyup="getLastname" />
+        placeholder="Doe" autocomplete="lastname" v-on:keyup="getSignupLastname" />
       <label for="firstname">Prénom:</label>
       <input class="flex flex_justify--center flex_align--center" type="text" name="firstname" id="firstname"
-        placeholder="John" autocomplete="firstname" v-on:keyup="getFirstname" />
+        placeholder="John" autocomplete="firstname" v-on:keyup="getSignupFirstname" />
       <label for="email">Email:</label>
       <input class="flex flex_justify--center flex_align--center" type="email" name="email" id="email"
-        placeholder="doe.john@outlook.fr" autocomplete="email" v-on:keyup="getEmail" />
+        placeholder="doe.john@outlook.fr" autocomplete="email" v-on:keyup="getSignupEmail" />
       <label for="password">Mot de passe:</label>
       <input class="flex flex_justify--center flex_align--center" type="password" name="password" id="password"
-        placeholder="Motdepasse" autocomplete="password" v-on:keyup="getPassword" />
+        placeholder="Motdepasse" autocomplete="password" v-on:keyup="getSignupPassword" />
       <label for="confirm_password">Confirmer mot de passe:</label>
       <input class="flex flex_justify--center flex_align--center" type="password" name="confirm_password"
-        id="confirm_password" placeholder="Motdepasse" autocomplete="confirm_password" v-on:keyup="getConfirmPassword" />
+        id="confirm_password" placeholder="Motdepasse" autocomplete="confirm_password" v-on:keyup="getSignupConfirmPassword" />
       <div class="flex flex_row flex_between flex_align--center">
         <input type="submit" value="Valider" id="button_submit" class="submit_button" />
       </div>
     </form>
+    <FooterToUse />
   </div>
 </template>
 
 <script>
 import HeaderNotLogged from '@/components/HeaderNotLogged.vue'
-import { /* mapGetters, */ mapMutations } from 'vuex'
+import FooterToUse from '@/components/FooterToUse.vue'
+import { mapActions, mapMutations } from 'vuex'
 
 export default {
   name: 'SignupView',
   components: {
-    HeaderNotLogged
+    HeaderNotLogged,
+    FooterToUse
   },
   computed:{
-    /* ...mapGetters(['getLastname', 'getFirstname', 'getEmail', 'getPassword', 'getConfirmPassword']) */
+    
   },
   methods:{
-    ...mapMutations(['getLastname', 'getFirstname', 'getEmail', 'getPassword', 'getConfirmPassword'])
+    ...mapMutations(['getSignupLastname', 'getSignupFirstname', 'getSignupEmail', 'getSignupPassword', 'getSignupConfirmPassword']),
+    ...mapActions(['register'])
   }
 }
 </script>
